@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -210,8 +211,12 @@ nav li {
     border-radius: 5px;
     text-align: center;
     padding: 30px 0px;
+    transition: 0.3s;
 }
-
+.fact-item:hover{
+    cursor: pointer;
+    border: 1px solid red;
+}
 .fact-item img {
     width: 30px;
 }
@@ -239,7 +244,7 @@ nav li {
 }
 
 .sponsor-items {
-    display: flex;
+  display: flex;
     justify-content: center;
     margin: 0 auto;
 }
@@ -251,8 +256,35 @@ nav li {
 .sponsor img {
     width: 115px;
     filter: grayscale(100%);
+    margin-bottom: 25px;
 }
-
+/* cliend section */
+.cliend-title{
+    font-size: 35px;
+    text-align: center;
+    margin: 80px 0px 50px 0px;
+}
+.our-cliends {
+    text-align: center;
+    display: flex;
+    
+  }
+  .our-cliend {
+    margin: 20px 40px;
+    color: #747474;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 10px 6px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+  }
+  .cliend {
+    width: 80px;
+    border: 3px solid white;
+    background-color: #ffb443;
+    border-radius: 50%;
+    position: relative;
+    bottom: 60px;
+  }
 /* footer sesction  */
 .footer {
     text-align: center;
@@ -265,9 +297,15 @@ nav li {
     font-size: 14px;
     color: #474747;
 }
-
+.cliend-name {
+    margin-top: -40px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .cliend-info {
+    margin-bottom: 20px;
+  }
 /* responsive for mobile device  */
-
 @media only screen and (max-width: 576px) {
     nav {
         display: block;
@@ -277,30 +315,37 @@ nav li {
     .nav-title {
         font-size: 30px;
     }
+
     nav ul {
         display: block;
     }
+
     nav li {
         margin: 10px;
     }
-    .header{
-        width: 100%;
+
+    .banner {
+        width: 100vw;
     }
+
     .banner-title {
-        padding: 10px 50px;
+        padding: 10px 80px;
         font-size: 30px;
     }
+
     .banner-description {
-        padding: 5px 50px;
+        padding: 5px;
         margin-top: 0px;
     }
-    /* team section  */
     .teams {
-        flex-direction: column;    
+        flex-direction: column;
+        margin: 0px auto;
+
     }
 
     .team-imges {
         display: block;
+        margin-left: -10px;
     }
 
     .team-img img {
@@ -316,32 +361,37 @@ nav li {
     .team-content-description {
         padding-right: 0px;
     }
+
     .features {
         display: block;
         padding: 20px;
         margin: 20px 20px 60px;
     }
+
     .feature-content-title {
         font-size: 25px;
     }
+
     .feature-img img {
         width: 80vw;
         height: 560px;
         margin-left: -55px;
     }
+
     .experience {
         bottom: 60px;
-        left: 80px;
-        position: absolute;
+       left: 30%;
     }
 
     .facts {
         margin-top: -80px;
         text-align: center;
     }
+
     .fact-description {
         margin: 15px -40px 40px;
     }
+
     .fact-items {
         display: block;
         padding: 0px;
@@ -351,16 +401,144 @@ nav li {
         text-align: center;
         margin-bottom: 20px;
     }
+
     .sponsors {
         margin-top: 30px;
     }
+
+    .sponsor-description {
+        padding: 25px
+    }
+
+    .sponsor-items {
+        flex-wrap: wrap;
+    }
+    .our-cliends{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .our-cliend{
+        width: 250px;
+        margin-bottom: 30px;
+    }
+    .footer {
+        margin: 30px 0 0 0;
+    }
+
+
+}
+/* mideum device responsive  */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    nav {
+        padding: 20px;
+    }
+
+    .banner-title {
+        padding: 80px 210px 0px ;
+        font-size: 30px;
+    }
+
+    .banner-description {
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+
+    .teams {
+        margin: 0px auto;
+        flex-direction: column-reverse;
+
+    }
+
+    .team-imges {
+        grid-template-columns: repeat(2,1fr);
+        margin-left: -10px;
+
+    }
+
+    .team-img img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .team-content {
+        text-align: center;
+    }
+
+    .team-content-description {
+        padding-right: 0px;
+    }
+
+    .features {
+        display: block;
+        padding: 20px;
+        margin: 20px 20px 60px;
+    }
+
+    .feature-content-title {
+        font-size: 25px;
+    }
+
+    .feature-img img {
+        width: 70vw;
+        height: 560px;
+        padding: 0px;
+    }
+
+    .experience {
+        bottom: 40px;
+       left: 35%;
+    }
+
+    .facts {
+        margin-top: -80px;
+        text-align: center;
+    }
+
+    .fact-description {
+        margin: 15px 30px 40px;
+    }
+
+    .fact-items {
+        grid-template-columns: repeat(2,1fr);
+        padding: 0px;
+    }
+
+    .fact-item {
+        text-align: center;
+        margin-bottom: 30px;
+       width: 200px;
+    }
+
+    .sponsors {
+        margin-top: 30px;
+    }
+.sponsor img{
+    margin-bottom: 0;
+}
     .sponsor-description {
         padding: 25px
     }
     .sponsor-items {
         flex-wrap: wrap;
+        padding: 30px;
+    }
+    .our-cliends{
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: center;
+    }
+    .our-cliend{
+        width: 250px;
+        margin-bottom: 30px;
+       margin-left: 65px;
     }
     .footer {
-        margin: 30px 0 0 0;
+        margin: 20px 30px;
+
     }
-}
+
+    }
+
